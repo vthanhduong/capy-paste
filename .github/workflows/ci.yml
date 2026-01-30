@@ -1,0 +1,25 @@
+name: 'ci'
+
+on:
+  push:
+    branches: ['develop', 'release']
+  pull_request:
+    branches: ['develop', 'release']
+
+jobs:
+  lint-and-type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: check format & lint
+        run: npm run lint

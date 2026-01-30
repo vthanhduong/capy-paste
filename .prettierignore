@@ -1,0 +1,21 @@
+# Build outputs
+dist/
+build/
+out/
+
+# Dependencies
+node_modules/
+
+# Tauri/Rust specific
+src-tauri/target/
+src-tauri/Cargo.lock
+
+# Static assets
+public/
+src/assets/
+
+# Logs and system files
+*.log
+.DS_Store
+.env
+.env.*
