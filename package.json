@@ -11,7 +11,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "tauri": "tauri",
-    "prepare": "is-ci || husky",
+    "prepare": "husky",
     "lint": "prettier --check . && tsc --noEmit",
     "format": "prettier --write ."
   },
